@@ -1,13 +1,57 @@
-# Java Template
+# Bob's Bagels
+
+![](./assets/bagels.jpg)
 
 ## Learning Objectives
-- Example learning objective
+- Design a domain from user stories
+- Use test driven development to build an application
 
 ## Set up instructions
 - Fork this repository and clone the forked version to your machine
 - Open the root directory of the project in IntelliJ
-- Implement the requirements listed in comments in the `./src/main/java/com.booleanuk/core/Exercise.java` file
-- When ready to test your solution, open the `./src/test/java/com.booleanuk/core/ExerciseTest.java` file and click a "Run Test" button. You can either run the entire test suite via figure 1 in the screenshot below, or run a specific test via figure 2.
+
+## Exercise Requirements
+
+- Use only the Basket class and BasketTest class provided. Later, you'll be building another version of this project using multiple classes together as we learn object-oriented programming.
+- You **must** design a domain model before you begin building. Add your model as either a `.md` file or a screenshot
+- You **must** use the Red Green Refactor approach to write your code. To demonstrate this, `git commit` after writing your test and commit again after writing the source code to pass it
+
+## User Stories
+
+```
+1.
+As a member of the public,
+So I can order a bagel before work,
+I'd like to add a specific type of bagel to my basket.
+```
+
+```
+2.
+As a member of the public,
+So I can change my order,
+I'd like to remove a bagel from my basket.
+```
+
+```
+3.
+As a member of the public,
+So that I can not overfill my small bagel basket
+I'd like to know when my basket is full when I try adding an item beyond my basket capacity.
+```
+
+```
+4.
+As a Bob's Bagels manager,
+So that I can expand my business,
+I’d like to change the capacity of baskets.
+```
+
+```
+5.
+As a member of the public
+So that I can maintain my sanity
+I'd like to know if I try to remove an item that doesn't exist in my basket.
+```
 
 ![](./assets/run-a-test.PNG)
 
@@ -21,6 +65,6 @@ In the sample screenshot below, we've tried to complete the first step of the ex
 
 At the top, we see `expected: <32> but was: <33>`. This means the test expected the value to be 32, but the value the student provided was 33. We can see this in the code snippets at the top of the screenshot.
 
-In the stack trace itself, we see this line: `at app//com.booleanuk.core.ExerciseTest.shouldBeAged32(ExerciseTest.java:20)`. This is helpful! This tells us the exact line in the ExerciseTest.java file (line 20) where the failure happened, as well as the method name (shouldBeAged32), helping us to identify where the issue began. This is the kind of thing you need to look for; a relevant file name, method name, class name and line number to give you a good starting point for debugging.
+In the stack trace itself, we see this line: `at app//com.booleanuk.core.BasketTest.shouldBeAged32(ExerciseTest.java:20)`. This is helpful! This tells us the exact line in the ExerciseTest.java file (line 20) where the failure happened, as well as the method name (shouldBeAged32), helping us to identify where the issue began. This is the kind of thing you need to look for; a relevant file name, method name, class name and line number to give you a good starting point for debugging.
 
 ![](./assets/test-failure.PNG)
