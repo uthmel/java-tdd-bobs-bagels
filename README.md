@@ -6,10 +6,6 @@
 - Design a domain from user stories
 - Use test driven development to build an application
 
-## Set up instructions
-- Fork this repository and clone the forked version to your machine
-- Open the root directory of the project in IntelliJ
-
 ## Exercise Requirements
 
 - Use only the Basket class and BasketTest class provided. Later, you'll be building another version of this project using multiple classes together as we learn object-oriented programming.
@@ -53,6 +49,12 @@ So that I can maintain my sanity
 I'd like to know if I try to remove an item that doesn't exist in my basket.
 ```
 
+## Set up instructions
+- Fork this repository and clone the forked version to your machine
+- Open the root directory of the project in IntelliJ
+- Implement the user stories based on the domain model you have developed following the **Red-Green-Refactor** methodology of writing your tests first, writing code to make them pass, and then iterating until the user story is implemented, then refactoring to make your code more elegant.
+- Run the tests individually as you go through and then rerun all of the tests at the end to ensure you haven't broken one part of the code when implementing another.
+
 ![](./assets/run-a-test.PNG)
 
 ## Test Output
@@ -61,7 +63,7 @@ When you run a test, it's either going to pass or fail. When it fails, you'll be
 
 One of the core skills of a developer is debugging stack traces like this. The stack trace details in which classes & files the failure happened, and gives you a line number at the end. Most of the lines in the stack trace are irrelevant most of the time, you want to try and identify the files that you're actually working with.
 
-In the sample screenshot below, we've tried to complete the first step of the exercise but provided an invalid value. Then we run the test associated with it and we see a big red stack trace, a test failure.
+In the sample screenshot below, we've tried to complete the first step of the exercise but provided an invalid value. Then we run the test associated with it, and we see a big red stack trace, a test failure.
 
 At the top, we see `expected: <32> but was: <33>`. This means the test expected the value to be 32, but the value the student provided was 33. We can see this in the code snippets at the top of the screenshot.
 
