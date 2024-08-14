@@ -28,7 +28,7 @@ public class Basket {
 
     public boolean addBagel(String bagel){
         if (isFull()) {
-            return true;
+            return false;
         }
 
         if (items.contains(bagel)){
@@ -39,13 +39,6 @@ public class Basket {
         return true;
     }
 
-     public boolean removeBagel(String bagel){
-        if (items.contains(bagel)) {
-            items.remove(bagel);
-            return true;
-        }
 
-        return false;
-    }
 
-}
+
