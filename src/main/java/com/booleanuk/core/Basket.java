@@ -39,6 +39,26 @@ public class Basket {
         return true;
     }
 
+    public boolean removeBagel(String bagel){
+        if (items.contains(bagel)) {
+            items.remove(bagel);
+            return true;
+        }
 
+        return false;
+    }
+
+
+    public boolean checkDuplicates(String bagel) {
+        if (items.contains(bagel)) {
+            return true;
+
+        }
+
+        return false;
+    }
+
+
+}
 
 
