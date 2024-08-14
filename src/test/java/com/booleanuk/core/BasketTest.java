@@ -16,16 +16,22 @@ class BasketTest {
         Assertions.assertTrue(result);
     }
 
+
     @Test
     public void testAddBagelToBasketIfFull(){
-        Basket basket = new Basket(15);
-        boolean result = basket.addBagel("Plain Bagel");
-        Assertions.assertTrue(result);
+        Basket basket = new Basket(1);
+        basket.addBagel("Plain Bagel");
+        boolean result = basket.addBagel("Crispy Bagel");
+        Assertions.assertFalse(result);
     }
 
     @Test
-    public void testRemoveBagelFromBasket() {
-
+    public void testRemoveExistingBagelFromBasket() {
+        Basket basket = new Basket(5);
+        basket.addBagel("Plain Bagel");
+        basket.addBagel("Crispy Bagel");
+        boolean result = basket.removeBagel("Plain Bagel");
+        Assertions.assertTrue(result);
 
     }
 
