@@ -13,7 +13,7 @@ class BasketTest {
     public void testAddBagelToBasketIfNotFull(){
         Basket basket = new Basket(10);
         boolean result = basket.addBagel("Plain Bagel");
-        Assertions.assertFalse(result);
+        Assertions.assertTrue(result);
     }
 
 
