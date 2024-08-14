@@ -8,13 +8,12 @@ import java.util.ArrayList;
 class BasketTest {
 
 
-
     @Test
     public void testAddBagelToBasketIfNotFull(){
         Basket basket = new Basket(10);
-        boolean result = basket.addBagel("Plain Bagel");
-        Assertions.assertTrue(result);
+        Assertions.assertTrue(basket.addBagel("Crispy Bagel"));
     }
+
 
 
     @Test

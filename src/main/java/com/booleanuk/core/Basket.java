@@ -12,19 +12,12 @@ public class Basket {
         this.capacity = capacity;
     }
 
-    public Basket(){
-        this(10);
-    }
-
 
     public boolean isFull() {
         return items.size() >=capacity;
 
     }
 
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
-    }
 
     public boolean addBagel(String bagel){
         if (isFull()) {
@@ -50,12 +43,7 @@ public class Basket {
 
 
     public boolean checkDuplicates(String bagel) {
-        if (items.contains(bagel)) {
-            return true;
-
-        }
-
-        return false;
+        return items.contains(bagel);
     }
 
 
