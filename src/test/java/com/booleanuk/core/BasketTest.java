@@ -36,11 +36,22 @@ class BasketTest {
     }
 
     @Test
-    public void testShouldNotAddDuplicateBagel() {
-        Basket basket = new Basket();
+    public void testRemoveNonExistingBagelFromBasket() {
+        Basket basket = new Basket(5);
         basket.addBagel("Plain Bagel");
-        boolean result = basket.addBagel("Plain Bagel");
+        basket.addBagel("Crispy Bagel");
+        boolean result = basket.removeBagel("Cheese Bagel");
         Assertions.assertFalse(result);
+
     }
+
+    @Test
+    public void testShouldNotAddDuplicateBagel() {
+        Basket basket = new Basket(10);
+        basket.addBagel("Plain Bagel");
+        boolean result = basket.checkDuplicates("Plain Bagel");
+        Assertions.assertTrue(result);
+    }
+
 
 }
